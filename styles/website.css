@@ -1,0 +1,199 @@
+/* Reset default margins/paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+}
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1a1a2e; /* dark blue or any color you like */
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
+.hero-content {
+  max-width: 700px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e64a19;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Header Layout */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Navigation Menu */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #007BFF;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 150px;
+}
+
+.search-bar button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Cart Icon */
+.cart {
+  position: relative;
+  font-size: 20px;
+  color: #333;
+}
+
+.cart .fa-cart-shopping {
+  font-size: 22px;
+}
+
+/* Badge */
+.cart .badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: block
